@@ -28,8 +28,10 @@
             <div class="btn-toolbar">
                 <div class="input-group">
                     <input class="form-control" type="date" name="date" id="inputDate">
-                    <button class="btn btn-sm btn-outline-secondary" onclick="filterDate()">Filter</button>
-                    <button class="btn btn-sm btn-outline-secondary" onclick="resetFilter()">Reset</button>
+                    <button class="btn btn-sm btn-outline-secondary"
+                        onclick="filterDate('inputDate', 'appointmentTable')">Filter</button>
+                    <button class="btn btn-sm btn-outline-secondary"
+                        onclick="resetFilter('inputDate', 'appointmentTable')">Reset</button>
                 </div>
             </div>
         </div>

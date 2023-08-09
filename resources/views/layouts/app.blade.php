@@ -28,12 +28,12 @@
     <script src="https://kit.fontawesome.com/8a58851d5d.js" crossorigin="anonymous"></script>
 
     <script>
-        function filterDate() {
+        function filterDate(inputId, tableId) {
             // Declare variables
             var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("inputDate");
+            input = document.getElementById(inputId);
             filter = input.value;
-            table = document.getElementById("appointmentTable");
+            table = document.getElementById(tableId);
             tr = table.getElementsByTagName("tr");
 
             // Loop through all table rows, and hide those who don't match the search query
@@ -50,10 +50,10 @@
             }
         }
 
-        function resetFilter() {
-            var input = document.getElementById("inputDate");
+        function resetFilter(inputId, tableId) {
+            var input = document.getElementById(inputId);
             input.value = '';
-            filterDate();
+            filterDate(inputId, tableId);
         }
     </script>
 </body>

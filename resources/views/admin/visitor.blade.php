@@ -1,7 +1,18 @@
 @extends('layouts.admin')
 
+@section('toolbar')
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <div class="input-group">
+            <input class="form-control" type="date" name="date" id="inputDate">
+            <button class="btn btn-sm btn-outline-secondary"
+                onclick="filterDate('inputDate', 'visitorTable')">Filter</button>
+            <button class="btn btn-sm btn-outline-secondary" onclick="resetFilter('inputDate', 'visitorTable')">Reset</button>
+        </div>
+    </div>
+@endsection
+
 @section('main')
-    <table class="table">
+    <table class="table" id="visitorTable">
         <thead>
             <th>#</th>
             <th>Nama</th>
